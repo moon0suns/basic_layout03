@@ -1,6 +1,14 @@
 $(function () {
 
+    //반응형 닫기 버튼 
+    $('.mopen').on('click', function () {
+        $(this).toggleClass('on');
+        $('.gnb').toggleClass('on');
+    })
 
+    $('.gnb').on('wheel touchmove', function (e) {
+        e.preventDefault();
+    })
 
     // 스크롤내려가면 헤더색바꾸기
     $(window).on('scroll', function () {
